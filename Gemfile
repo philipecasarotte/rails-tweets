@@ -2,7 +2,8 @@ source "https://rubygems.org"
 
 gem "rails", "4.1.0"
 gem "mysql2"
-gem "pg", 
+gem "pg"
+gem "rails_12factor"
 gem "uglifier", ">= 1.3.0"
 gem "jquery-rails"
 gem "turbolinks"
