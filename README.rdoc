@@ -40,8 +40,3 @@ https://young-hollows-2987.herokuapp.com
 * run <tt>heroku run rake db:migrate</tt>
 
 * run <tt>heroku open</tt>
-
-
-== Test
-
-* run <tt>bundle exec rspec</tt>

@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-  get "/", :controller => "tweets", :action => "index"
+  root :to => "tweets#index"
 end
