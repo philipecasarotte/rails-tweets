@@ -1,66 +1,47 @@
 == Rails Tweets App
 
-I chose to simply use This README would normally document whatever steps are necessary to get the
-application up and running.
+Simple app to display your latest 25 tweets. I decide to use ENV vars so keys are not displayed to the public.
 
 https://young-hollows-2987.herokuapp.com
 
-== Local Deployment
+== Instructions for Local Deployment
 
-Things you may want to cover:
+* Clone Repositiory
 
-* Ruby version
-
-* System dependencies
-
-* Configuration (Unix Environment Variables ~/.bashrc)
-** export TWITTER_CONSUMER_KEY={{YOUR_ACCESS_SECRET}}
-** export TWITTER_CONSUMER_SECRET={{YOUR_ACCESS_SECRET}}
-** export TWITTER_ACCESS_TOKEN={{YOUR_ACCESS_SECRET}}
+* Set enviroment vars (Unix Environment Variables ~/.bashrc)
+** export TWITTER_CONSUMER_KEY={{YOUR_CONSUMER_KEY}}
+** export TWITTER_CONSUMER_SECRET={{YOUR_CONSUMER_SECRET}}
+** export TWITTER_ACCESS_TOKEN={{YOUR_ACCESS_TOKEN}}
 ** export TWITTER_ACCESS_SECRET={{YOUR_ACCESS_SECRET}}
+** export TWITTER_HANDLER={{YOUR_TWITTER_HANDLER}}
 
-* Database creation
+* run <tt>rake db:migrate</tt>
 
-* Database initialization
+* run <tt>rails s</tt>
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
 
 == Heroku Deployment
 
-Once you have cloned the reposiroty run the following commands from your terminal
+* Clone Repositiory
 
-* heroku create - Creates the app on Heroku's
+* run <tt>heroku login</tt> - Login to your Heroku's account
 
-* git push heroku master - Push your code to Heroku's server
+* run <tt>heroku create</tt> - Creates your app on Heroku's
 
-* Configuration - 
-** heroku config:set TWITTER_CONSUMER_KEY={{YOUR_ACCESS_SECRET}}
-** heroku config:set TWITTER_CONSUMER_SECRET={{YOUR_ACCESS_SECRET}}
-** heroku config:set TWITTER_ACCESS_TOKEN={{YOUR_ACCESS_SECRET}}
+* run <tt>git push heroku master</tt> - Push your code into Heroku's server
+
+* Configuration - (Setting Enviroment vars on Heroku's server)
+** heroku config:set TWITTER_CONSUMER_KEY={{YOUR_CONSUMER_KEY}}
+** heroku config:set TWITTER_CONSUMER_SECRET={{YOUR_CONSUMER_SECRET}}
+** heroku config:set TWITTER_ACCESS_TOKEN={{YOUR_ACCESS_TOKEN}}
 ** heroku config:set TWITTER_ACCESS_SECRET={{YOUR_ACCESS_SECRET}}
+** heroku config:set TWITTER_HANDLER={{YOUR_TWITTER_HANDLER}}
 
-* Database creation
+* run <tt>heroku run rake db:migrate</tt>
 
-* Database initialization
+* run <tt>heroku open</tt>
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
 
 == Test
 
-run $ rails spec dasdsadas
+* run <tt>bundle exec rspec</tt>
