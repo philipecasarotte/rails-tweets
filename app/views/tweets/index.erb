@@ -1,0 +1,10 @@
+<h1>Tweets by @pcasarotte</h1>
+<ul id="tweets">
+	<% @tweets.each do |tweet| %>
+	<li>
+		<blockquote>
+			<p><%= auto_link(tweet.text).html_safe %></p>
+		</blockquote>
+	</li>
+	<% end %>
+</ul>

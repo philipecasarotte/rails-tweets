@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>StackCommerce | Tweets</title>
+  <link href="http://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet" type="text/css"/>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => false %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => false %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+	<header>
+	<% if signed_in? %>
+		<small>Signed in as: <%= current_user.email %></small>
+		<%= button_to 'Sign out', sign_out_path, method: :delete %>
+	<% else %>
+		<%= link_to 'Sign in', sign_in_path %>
+	<% end %>
+	</header>
+
+	<div id="flash">
+	<% flash.each do |key, value| %>
+		<div class="flash <%= key %>"><%= value %></div>
+	<% end %>
+	</div>
+	
+	<section>
+		<%= yield %>
+	</section>
+</body>
+</html>

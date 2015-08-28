@@ -1,0 +1,22 @@
+default: &default
+  adapter: mysql2
+  encoding: utf8
+  pool: 5
+  username: root
+  password: 
+  host: localhost
+  port: 8889
+
+development:
+  <<: *default
+  database: stackcommerce_development
+
+test:
+  <<: *default
+  database: stackcommerce_test
+
+production:
+  <<: *default
+  database: stackcommerce_production
+  username: stackcommerce
+  password: <%= ENV['INSTERVIEW_DATABASE_PASSWORD'] %>
