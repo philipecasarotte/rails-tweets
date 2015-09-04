@@ -1,3 +1,5 @@
+{<img src="https://codeclimate.com/github/philipecasarotte/rails-tweets/badges/gpa.svg" />}[https://codeclimate.com/github/philipecasarotte/rails-tweets]
+
 == Rails Tweets App
 
 Simple app to display your latest 25 tweets. I decide to use ENV vars so keys are not displayed to the public.
